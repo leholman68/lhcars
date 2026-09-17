@@ -1,234 +1,80 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lyndon Holman Cars - Quality Hand-Picked Vehicles</title>
     <style>
-        :root {
-            --primary: #2C3333;
-            --accent: #FF7B00;
-            --light: #F4F6F6;
-            --white: #FFFFFF;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light);
-            color: var(--primary);
-            text-align: center;
-        }
-        header {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 40px 20px;
-            border-bottom: 5px solid var(--accent);
-        }
-        header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.5rem;
-            letter-spacing: 1px;
-        }
-        header p {
-            margin: 8px 0;
-            font-size: 1.1rem;
-            color: #ddd;
-        }
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: var(--primary);
-        }
-        .car-card {
-            background: var(--white);
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: left;
-            border-top: 4px solid var(--accent);
-            margin-bottom: 40px;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .car-images {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding: 10px;
-            background: #eee;
-        }
-        .car-images img {
-            width: 100%;
-            height: auto;
-            max-height: 450px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-        .car-info {
-            padding: 25px;
-        }
-        .car-info h3 {
-            margin: 0 0 10px 0;
-            font-size: 1.5rem;
-        }
-        .price {
-            color: var(--accent);
-            font-size: 1.4rem;
-            font-weight: bold;
-            margin-bottom: 15px;
-        }
-        .details-section {
-            font-size: 0.95rem;
-            color: #444;
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-        .details-section h4 {
-            color: var(--primary);
-            margin: 15px 0 5px 0;
-            font-size: 1.1rem;
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 3px;
-            display: inline-block;
-        }
-        .placeholder-card {
-            background: #e9ecef;
-            border: 2px dashed #ccc;
-            border-radius: 8px;
-            padding: 40px 20px;
-            margin-bottom: 40px;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-            color: #777;
-            font-style: italic;
-        }
-        .contact-box {
-            background: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            display: inline-block;
-            width: 100%;
-            max-width: 650px;
-            box-sizing: border-box;
-            border-left: 6px solid var(--accent);
-            text-align: left;
-            margin-top: 20px;
-        }
-        .contact-box h2 {
-            margin-top: 0;
-            text-align: center;
-        }
-        .contact-details {
-            font-size: 1.05rem;
-            line-height: 1.6;
-        }
-        footer {
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 25px;
-            margin-top: 50px;
-            font-size: 0.9rem;
-            border-top: 3px solid var(--accent);
-        }
+        :root { --primary: #2C3333; --accent: #FF7B00; --light: #F4F6F6; --white: #FFFFFF; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: var(--light); color: var(--primary); text-align: center; }
+        header { background-color: var(--primary); color: var(--white); padding: 40px 20px; border-bottom: 5px solid var(--accent); }
+        header h1 { margin: 0 0 10px 0; font-size: 2.5rem; letter-spacing: 1px; }
+        header p { margin: 8px 0; font-size: 1.1rem; color: #ddd; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        h2 { font-size: 2rem; margin-bottom: 30px; color: var(--primary); }
+        .car-card { background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: left; border-top: 4px solid var(--accent); margin-bottom: 40px; max-width: 650px; margin-left: auto; margin-right: auto; }
+        .car-images { display: flex; flex-direction: column; gap: 10px; padding: 10px; background: #eee; }
+        .car-images img { width: 100%; height: auto; max-height: 450px; object-fit: cover; border-radius: 4px; }
+        .car-info { padding: 25px; }
+        .car-info h3 { margin: 0 0 10px 0; font-size: 1.5rem; }
+        .price { color: var(--accent); font-size: 1.4rem; font-weight: bold; margin-bottom: 15px; }
+        .details-section { font-size: 0.95rem; color: #444; margin-bottom: 15px; line-height: 1.6; }
+        .details-section h4 { color: var(--primary); margin: 15px 0 5px 0; font-size: 1.1rem; border-bottom: 2px solid var(--accent); padding-bottom: 3px; display: inline-block; }
+        .placeholder-card { background: #e9ecef; border: 2px dashed #ccc; border-radius: 8px; padding: 40px 20px; margin-bottom: 40px; max-width: 650px; margin-left: auto; margin-right: auto; color: #777; font-style: italic; }
+        .contact-box { background: var(--white); padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: inline-block; width: 100%; max-width: 650px; box-sizing: border-box; border-left: 6px solid var(--accent); text-align: left; margin-top: 20px; }
+        .contact-box h2 { margin-top: 0; text-align: center; }
+        .contact-details { font-size: 1.05rem; line-height: 1.6; }
+        footer { background-color: var(--primary); color: var(--white); padding: 25px; margin-top: 50px; font-size: 0.9rem; border-top: 3px solid var(--accent); }
     </style>
 </head>
 <body>
-
-    <!-- HEADER -->
     <header>
         <h1>LYNDON HOLMAN CARS</h1>
         <p>Quality Hand-Picked Vehicles • Viewings By Appointment</p>
         <p>📞 Call / Text: 07800 928 192 | 📧 Lyndon.holman@outlook.com</p>
     </header>
-
-    <!-- CAR INVENTORY SECTION -->
     <div class="container">
         <h2>Current Vehicles In Stock</h2>
-        
-        <!-- VEHICLE 1: NISSAN MICRA -->
         <div class="car-card">
-            <!-- WORKING PHOTO GALLERY -->
+            <!-- LOOKING FOR IMAGES NAMED 1.jpg, 2.jpg, etc. RIGHT NEXT TO THIS FILE -->
             <div class="car-images">
-                <img src="https://postimg.cc" alt="Nissan Micra Front View">
-                <img src="https://postimg.cc" alt="Nissan Micra Side View">
-                <img src="https://postimg.cc" alt="Nissan Micra Rear View">
-                <img src="https://postimg.cc" alt="Nissan Micra Boot Open">
-                <img src="https://postimg.cc" alt="Nissan Micra Spare Wheel">
-                <img src="https://postimg.cc" alt="Nissan Micra Alloy Wheel">
+                <img src="1.jpg" alt="Nissan Micra Front View">
+                <img src="2.jpg" alt="Nissan Micra Side View">
+                <img src="3.jpg" alt="Nissan Micra Rear View">
+                <img src="4.jpg" alt="Nissan Micra Interior">
+                <img src="5.jpg" alt="Nissan Micra Engine">
+                <img src="6.jpg" alt="Nissan Micra Wheel">
             </div>
-
             <div class="car-info">
                 <h3>2009 Nissan Micra 1.2 n-tec (EX59 LFH)</h3>
                 <div class="price">£2,495</div>
-                
                 <div class="details-section">
                     <h4>Vehicle Overview</h4>
                     <br>• <strong>Mileage:</strong> 98,867 miles
-                    <br>• <strong>Registration Date:</strong> 28/11/2009
                     <br>• <strong>Fuel Type:</strong> Petrol | Manual | 3-Door Hatchback (Grey)
                     <br>• <strong>MOT Valid Until:</strong> August 2027
-                    <br>• <strong>Previous Owners:</strong> 5
-
                     <h4>Service & Maintenance History</h4>
-                    <br>• <strong>Service Record:</strong> 8 services documented (most recent oil and filter service completed on 17/07/2026)
+                    <br>• <strong>Service Record:</strong> 8 services documented (most recent oil/filter 17/07/2026)
                     <br>• <strong>Mechanical Work:</strong> Full MOT repairs just carried out + brand new clutch fitted
-                    <br>• <strong>Documentation:</strong> V5 logbook, original documentation, service book, owner's manuals, and 1 key included
-
                     <h4>Specification & Features</h4>
-                    <br>• Built-in Satellite Navigation & upgraded 3rd-party stereo system
-                    <br>• Air conditioning & Alloy wheels
-                    <br>• Full-sized spare wheel included
-
-                    <h4>Condition Note</h4>
-                    <br>Great mechanical shape, fully valeted, and ready to drive away. Note: Paint respray on the bonnet, which is reflected in the competitive price.
-
+                    <br>• Built-in Satellite Navigation, Air conditioning & Alloy wheels
                     <h4>Warranty & Peace of Mind</h4>
                     <br>• Comes with a 30-day warranty
-                    <br>• Ideal, reliable commuter or first car ready to go!
                 </div>
             </div>
         </div>
-
-        <!-- VEHICLE 2 PLACEHOLDER -->
-        <div class="placeholder-card">
-            <h3>Vehicle Slot 2</h3>
-            <p>New stock arriving soon. Details and images will be posted shortly.</p>
-        </div>
-
-        <!-- VEHICLE 3 PLACEHOLDER -->
-        <div class="placeholder-card">
-            <h3>Vehicle Slot 3</h3>
-            <p>New stock arriving soon. Details and images will be posted shortly.</p>
-        </div>
-
-        <!-- GET IN TOUCH / SERVICES BOX -->
+        <div class="placeholder-card"><h3>Vehicle Slot 2</h3><p>New stock arriving soon.</p></div>
+        <div class="placeholder-card"><h3>Vehicle Slot 3</h3><p>New stock arriving soon.</p></div>
         <div class="contact-box">
             <h2>Get In Touch</h2>
             <div class="contact-details">
                 <p><strong>Viewings:</strong> Strictly by appointment only.</p>
-                <p><strong>Looking for something specific?</strong> Please contact me if you are looking for anything in particular and I might be able to locate it for you. Happy to help.</p>
-                <p><strong>Payment & Exchange:</strong> Part Exchange Welcome. Secure any vehicle with a deposit. Cash, credit card, debit card, and bank transfer accepted.</p>
+                <p><strong>Payment & Exchange:</strong> Part Exchange Welcome. Cash, card, and bank transfer accepted.</p>
                 <p style="margin-top: 20px;"><strong>Phone / Text:</strong> <a href="tel:07800928192" style="color: var(--accent); text-decoration: none;">07800 928 192</a></p>
                 <p><strong>Email:</strong> <a href="mailto:Lyndon.holman@outlook.com" style="color: var(--accent); text-decoration: none;">Lyndon.holman@outlook.com</a></p>
             </div>
         </div>
-
     </div>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 Lyndon Holman Cars. All rights reserved. Quality Hand-Picked Vehicles.</p>
-    </footer>
-
+    <footer><p>&copy; 2026 Lyndon Holman Cars. All rights reserved.</p></footer>
 </body>
 </html>
-
